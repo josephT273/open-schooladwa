@@ -6,6 +6,7 @@ import "dotenv/config";
 
 // Routes
 import generativeAI from "./routes/generative-ai.js";
+import googleBooks from "./routes/googlebooks.js";
 
 // start express app
 const app = express();
@@ -33,6 +34,7 @@ app.get("/", (req, res) => {
 
 // ENDPOINT
 app.use("/generativeAI", generativeAI);
+app.use("/googlebooks", googleBooks);
 
 // Import the server port form env file
 const PORT = Number.parseInt(process.env.PORT) || 7000;
