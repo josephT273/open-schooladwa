@@ -20,6 +20,6 @@ const chat = async (req, res) => {
   });
 };
 
-route.use("/chat").post(chat);
+route.route("/chat").post(chat);
 
 export default route;
