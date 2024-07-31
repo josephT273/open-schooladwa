@@ -23,6 +23,11 @@ app.use((err, req, res, next) => {
   });
 });
 
+// * Welcome
+app.get("/", (req, res) => {
+  res.send("Welcome to Open-SchoolAdwa");
+});
+
 // Import the server port form env file
 const PORT = Number.parseInt(process.env.PORT) || 7000;
 
