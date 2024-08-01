@@ -40,7 +40,7 @@ app.use("/openlibrary", openlibrary);
 app.use("/dictionaryapi", dictionaryapi);
 
 // Import the server port form env file
-const PORT = process.env.PORT || 7000;
+const PORT = process.env.APP_PORT || 7000;
 
 // *Server
 app.listen(PORT, () => {
