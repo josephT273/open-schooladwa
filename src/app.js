@@ -2,7 +2,7 @@ import express from "express";
 import bodyParser from "body-parser";
 import methodOverride from "method-override";
 import "dotenv/config";
-
+import cors from "cors";
 // Routes
 import generativeAI from "./routes/generative-ai.js";
 import googleBooks from "./routes/googlebooks.js";
@@ -18,6 +18,8 @@ app.use(
     extended: true,
   })
 );
+
+app.use(cors());
 
 app.use(bodyParser.json());
 app.use(methodOverride());
