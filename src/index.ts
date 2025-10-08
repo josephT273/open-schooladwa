@@ -1,4 +1,4 @@
-import type { config } from "./interface";
+import type { config } from "./interface/index.js";
 import Dictionary from "./plugins/dictionary-api.js";
 import GoogleAI from "./plugins/google-ai.js";
 import "dotenv/config";
