@@ -1,9 +1,9 @@
 import type { config } from "./interface";
-import Dictionary from "./plugins/dictionary-api";
+import Dictionary from "./plugins/dictionary-api.js";
 import GoogleAI from "./plugins/google-ai.js";
 import "dotenv/config";
-import GoogleLibrary from "./plugins/google-books";
-import OpenLibrary from "./plugins/open-library";
+import GoogleLibrary from "./plugins/google-books.js";
+import OpenLibrary from "./plugins/open-library.js";
 
 export default class OpenSchoolAdwa {
 	private google?: GoogleAI;
