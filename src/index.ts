@@ -2,6 +2,7 @@ import type { config } from "./interface";
 import Dictionary from "./plugins/dictionary-api";
 import GoogleAI from "./plugins/google-ai.js";
 import "dotenv/config";
+import GoogleLibrary from "./plugins/google-books";
 import OpenLibrary from "./plugins/open-library";
 
 export default class OpenSchoolAdwa {
@@ -27,6 +28,11 @@ export default class OpenSchoolAdwa {
 
 	async openBook(bookName: string) {
 		const books = new OpenLibrary().define(bookName);
+		return books;
+	}
+
+	async googleBook(bookName: string) {
+		const books = new GoogleLibrary().define(bookName);
 		return books;
 	}
 }
