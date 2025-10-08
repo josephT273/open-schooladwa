@@ -1,23 +1,49 @@
 {
   "name": "open-schooladwa",
-  "version": "1.0.0",
-  "main": "app.js",
+  "version": "0.0.1",
+  "description": "Open Source Learning material provider software backend project",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "type": "module",
+  "files": [
+    "dist/**/*",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
-    "start": "node ./src/app.js",
-    "dev": "nodemon --trace-warnings --experimental-modules ./src/app.js"
+    "build": "tsc",
+    "dev": "ts-node --esm src/index.ts",
+    "start": "node dist/index.js",
+    "prepublishOnly": "npm run build",
+    "clean": "rimraf dist",
+    "prebuild": "npm run clean"
   },
-  "keywords": [],
+  "keywords": [
+    "education",
+    "learning",
+    "api",
+    "books",
+    "dictionary",
+    "ai",
+    "typescript"
+  ],
   "author": "Joseph Tadesse",
   "license": "ISC",
-  "description": "Open Source Learning material provider software backend project",
   "dependencies": {
+    "@google/genai": "^1.22.0",
     "@google/generative-ai": "^0.24.0",
     "axios": "^1.12.0",
-    "body-parser": "^1.20.2",
     "cors": "^2.8.5",
-    "dotenv": "^16.6.1",
-    "express": "^4.21.2",
-    "method-override": "^3.0.0"
+    "dotenv": "^16.6.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "nodemon": "^3.0.2",
+    "rimraf": "^5.0.5",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.3.2"
+  },
+  "engines": {
+    "node": ">=16.0.0"
   }
 }
