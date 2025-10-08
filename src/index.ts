@@ -2,6 +2,7 @@ import type { config } from "./interface";
 import Dictionary from "./plugins/dictionary-api";
 import GoogleAI from "./plugins/google-ai.js";
 import "dotenv/config";
+import OpenLibrary from "./plugins/open-library";
 
 export default class OpenSchoolAdwa {
 	private google?: GoogleAI;
@@ -23,6 +24,9 @@ export default class OpenSchoolAdwa {
 		const define = new Dictionary().define(word);
 		return define;
 	}
-}
 
-new OpenSchoolAdwa().dictionary("hello");
+	async openBook(bookName: string) {
+		const books = new OpenLibrary().define(bookName);
+		return books;
+	}
+}
