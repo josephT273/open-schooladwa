@@ -30,7 +30,7 @@
   "author": "Joseph Tadesse",
   "license": "ISC",
   "dependencies": {
-    "@google/genai": "^1.22.0",
+    "@google/genai": "^1.24.0",
     "@google/generative-ai": "^0.24.0",
     "axios": "^1.12.0",
     "cors": "^2.8.5",
