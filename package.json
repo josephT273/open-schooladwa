@@ -1,6 +1,6 @@
 {
   "name": "open-schooladwa",
-  "version": "0.0.21",
+  "version": "0.0.3",
   "description": "Open Source Learning material provider software backend project",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -31,9 +31,7 @@
   "license": "ISC",
   "dependencies": {
     "@google/genai": "^1.29.0",
-    "@google/generative-ai": "^0.24.0",
     "axios": "^1.13.2",
-    "cors": "^2.8.5",
     "dotenv": "^16.6.1"
   },
   "devDependencies": {
